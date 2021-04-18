@@ -9,8 +9,8 @@ RUN apt-get -q update && \
     rm -rf /var/lib/apt/lists/*
 
 COPY ./entrypoint.sh /entrypoint.sh
-COPY ./Clean.ps1 /scripts/Clean.ps1
+COPY ./Purge.ps1 /scripts/Purge.ps1
 RUN chmod u+x /entrypoint.sh
-RUN chmod u+x /scripts/Clean.ps1
+RUN chmod u+x /scripts/Purge.ps1
 
 ENTRYPOINT ["/entrypoint.sh"]
